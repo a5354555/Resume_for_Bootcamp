@@ -1,0 +1,715 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Abel', sans-serif;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #FFF;
+	text-align: center;
+	overflow-x: hidden;
+}
+.h-center{
+	display: flex;
+	justify-content: center;
+}
+.v-center{
+	display: flex;
+	align-items: center;
+}
+.container{
+	width: 1400px;
+}
+.right{
+	float: right;
+}
+.navFixed {
+   z-index: 10;          
+   position: fixed;      
+   top: 0;
+   left: 0;
+   margin-top: 0;
+   min-width: 100%;
+   transition: 5s;
+}
+/*-------
+header
+-------*/
+
+header{
+	height: 965px;
+}
+.nav-bar{
+	height: 50px;
+	background: rgba(0,0,0,0.25);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav-item{
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	height: 18px;
+	letter-spacing: 2px;
+	color: rgb(90,90,90);
+	margin-left: 50px;
+}
+.nav-item:nth-child(1){
+	margin-left: 0;
+}
+.nav-item::after{
+	content: '';
+	display: block;
+	width: 0;
+	background-color: #000;
+	margin-top: 5px;
+	height: 1px;
+	transition: width 0.3s ease-in-out;
+}
+.nav-item:hover{
+	color: #000;
+}
+.nav-item:hover::after{
+	width: 100%;
+}
+
+/*-------
+discography
+-------*/
+.discography .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.discography .desc{
+	width: 850px;
+	padding: 50px;
+	margin-top: 100px;
+}
+.discography .desc h1{
+	font-size: 50px;
+	background: -webkit-linear-gradient(#ae8275,#99684b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 5px;
+}
+.discography .desc p{
+	margin-top: 50px;
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(50,50,50);
+}
+.discography .box{
+	width: 1400px;
+	margin-top: 100px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	text-align: left;
+}
+.discography .box:nth-child(4){
+	margin-bottom: 500px;
+}
+.discography .date{
+	width: 50%;
+	display: inline-block;
+	padding: 10px;
+}
+.discography .date p{
+	color: rgb(50,50,50);
+	font-size: 14px;
+}
+.discography .date h1{
+	font-weight: bolder;
+	margin-top: 10px;
+}
+.discography .date h1::before{
+	content: '';
+	border-top: solid 1px #000;
+	display: block;
+	margin-bottom: 5px;
+	color: #000;
+}
+.discography .info{
+	width: 50%;
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+}
+.discography .info h1{
+	font-size: 24px;
+	letter-spacing: 1px;
+	color: rgb(50,50,50);
+	font-weight: bolder;
+	position: absolute;
+	left: 0;
+	bottom: calc(100% - 25px);
+	padding: 0 10px;
+	line-height: 1.3;
+}
+.discography .info p{
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(150,150,150);
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.discography .info a{
+	transition: 0.3s;
+}
+.discography .info a:hover{
+	opacity: 0.75;
+	transition: all 0.3s;
+}
+
+/*-------
+concert
+-------*/
+.concert .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+.concert .desc{
+	width: 850px;
+	padding: 50px;
+	margin-top: 100px;
+	margin-bottom: 1000px;
+}
+.concert .desc h1{
+	font-size: 50px;
+	background: -webkit-linear-gradient(#62a2ad,#8dbab3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 5px;
+}
+.concert .desc p{
+	margin-top: 50px;
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(50,50,50);
+}
+.concert .box{
+	text-align: left;
+	position: absolute;
+	bottom: 250px;
+	left: 150px;
+	width: 700px;
+}
+.concert .box .date{
+	margin-bottom: 85px;
+}
+.concert .box .date p{
+	color: rgb(50,50,50);
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.concert .box .date h1{
+	font-weight: bolder;
+	margin-top: 10px;
+	letter-spacing: 1px;
+}
+.concert .box .date h1::before{
+	content: '';
+	border-top: solid 1px #000;
+	display: block;
+	width: 400px;
+	margin-bottom: 5px;
+	color: #000;
+}
+.concert .box .info h1{
+	font-size: 28px;
+	letter-spacing: 2px;
+	margin-bottom: 25px;
+}
+.concert .box .info p{
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(100,100,100);
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+.concert .box .info a{
+	text-decoration: none;
+	font-weight: bolder;
+	text-align: center;
+	color: #000;
+	display: block;
+	width: 230px;
+	height: 60px;
+	font-size: 18px;
+	line-height: 60px;
+	letter-spacing: 2px;
+	border: solid 1px rgb(120,120,120);
+	background: transparent;
+	padding: 0 50px;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+.concert .box .info a:hover{
+	background: rgba(150,150,150,0.05);
+	transition: 0.3s;
+}
+
+/*-------
+latter
+-------*/
+.latter .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.latter .desc{
+	width: 850px;
+	padding: 50px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.latter .desc h1{
+	font-size: 50px;
+	letter-spacing: 5px;
+	color: rgb(50,50,50);
+}
+.latter .desc p{
+	margin-top: 50px;
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(50,50,50);
+}
+.latter .box{
+	width: 1100px;
+	margin-bottom: 50px;
+}
+.latter .box:nth-child(4){
+	margin-bottom: 150px;
+}
+.latter .vid-desc{
+	background: rgb(245,245,245);
+	width: 550px;
+	height: 400px;
+	display: inline-block;
+	padding: 25px;
+	text-align: left;
+	padding-right: 35px;
+	position: relative;
+}
+.latter .vid{
+	width: 550px;
+	height: 400px;
+	display: inline-block;
+}
+.latter .date{
+	margin-bottom: 50px;
+}
+.latter .date p{
+	color: rgb(50,50,50);
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.latter .date h1{
+	font-weight: 500;
+	margin-top: 8px;
+	letter-spacing: 2px;
+}
+.latter .date h1::before{
+	content: '';
+	border-top: solid 1px #000;
+	display: block;
+	width: 400px;
+	margin-bottom: 5px;
+	color: #000;
+}
+.latter .info h1{
+	font-size: 26px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+.latter .info p{
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(100,100,100);
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+.latter .link{
+	position: absolute;
+	bottom: 30px;
+}
+.latter .itune{
+	text-decoration: none;
+	font-weight: bolder;
+	text-align: center;
+	color: #000;
+	height: 40px;
+	width: 160px;
+	line-height: 40px;
+	display: inline-block;
+	background: transparent;
+	border: solid 1px rgb(125,125,125);
+	transition: 0.3s;
+}
+.latter .icon{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	vertical-align: bottom;
+	margin-left: 20px;
+	transition: 0.3s;
+}
+.latter .itune:hover,.latter .icon:hover{
+	opacity: 0.5;
+	transition: 0.3s;
+}
+/*-------
+slider
+-------*/
+.slider{
+	height: 642px;
+	position: relative;
+}
+.slider ul{
+	width: 100%;
+}
+.slider img{
+	width: 100%;
+	height: 642px;
+}
+.slider .prev,.slider .next{
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	margin-top: -60px;
+	height: 120px;
+	width: 120px;
+	transform: rotate(45deg);
+	background: #FFF;
+	border-radius: 4px;
+}
+.slider .prev{
+	left: -60px;
+}
+.slider .next{
+	right: -60px;
+}
+
+/*-------
+new tracks
+-------*/
+.new .container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 150px;
+	padding-bottom: 100px;
+}
+.new .track-item{
+	height: 422px;
+	width: 384px;
+	display: block;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	padding: 25px;
+	position: relative;
+}
+.new .track-item:nth-child(3n){
+	margin-right: 0;
+}
+.new .track-item::before{
+	content: '';
+	display: block;
+	height: inherit;
+	width: inherit;
+	position: absolute;
+	background: rgba(255,255,255,0.8);
+	left: 0;
+	top: 0;
+}
+.new .date h1{
+	position: absolute;
+	top: 50px;
+	text-align:left;
+	font-size: 18px;
+	font-weight: bolder;
+	color: #FFF;
+}
+.new .date p{
+	color: rgb(50,50,50);
+	font-size: 14px;
+	letter-spacing: 1px;
+	position: absolute;
+	text-align: left;
+	font-weight: bold;
+}
+.new .date p::after{
+	content: '';
+	display: block;
+	width: 250px;
+	border-bottom: solid 1px rgb(50,50,50);
+	margin-top: 5px;
+}
+.new .info{
+	position: absolute;
+	text-align: left;
+	top: 100px;
+}
+.new .info h1{
+	font-size: 32px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	height: 64px;
+}
+.new .info p{
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(100,100,100);
+	margin-top: 30px;
+}
+.new .track-item>p{
+	overflow: hidden;
+	font-size: 70px;
+	position: absolute;
+	font-weight: bolder;
+	bottom: 0;
+	right: 10px;
+	opacity: 0.15;
+	font-family: 'Anton', sans-serif;
+	color: #888;
+}
+
+/*-------
+event
+-------*/
+.event .container{
+	position: relative;
+	height: 1203px;
+}
+.event .desc{
+	display: block;
+	width: 600px;
+	position: absolute;
+	right: 80px;
+	top: 220px;
+}
+.event .desc h1{
+	font-size: 50px;
+	text-align: left;
+	background: -webkit-linear-gradient(#42717e,#668993);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 5px;
+}
+.event .info{
+	display: block;
+	text-align: left;
+	width: 600px;
+	position: absolute;
+	right: 80px;
+	top: 350px;
+}
+.event .info h1{
+	font-size: 28px;
+	font-weight: bolder;
+	letter-spacing: 2px;
+}
+.event .info h1::after{
+	content: '';
+	display: block;
+	border-bottom: solid 1px #000;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 150px;
+}
+.event .info p{
+	color: rgb(100,100,100);
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+}
+.event .info p::after{
+	content: '';
+	display: block;
+	border-right: solid 1px rgb(100,100,100);
+	width: 1px;
+	height: 180px;
+	margin: 15px 0;
+	margin-left: 35px;
+}
+.event .info .date{
+	font-weight: bolder;
+	letter-spacing: 0;
+}
+.event .info p:nth-child(2)::after,.event .info p:nth-child(5)::after{
+	height: 50px;
+}
+.event .info p:nth-child(6)::after{
+	display: none;
+}
+
+/*-------
+history
+-------*/
+.history{
+	height: 1250px;
+	position: relative;
+}
+.history .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.history .desc{
+	width: 850px;
+	padding: 50px;
+	margin-top: 100px;
+	text-align: center;
+}
+.history .desc h1{
+	font-size: 50px;
+	color: rgb(50,50,50);
+	letter-spacing: 5px;
+}
+.history .desc p{
+	margin-top: 50px;
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(50,50,50);
+}
+.history .date{
+	width: 100%;
+	position: absolute;
+	top: 40%;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.history .date p{
+	color: rgb(200,200,200);
+	font-size: 36px;
+	letter-spacing: 5px;
+}
+.history .divider{
+	display: block;
+	width: 125px;
+	height: 1px;
+	background: rgb(200,200,200);
+}
+.history .date p:nth-child(6){
+	color: rgb(80,80,80);
+}
+.history .date p:nth-child(6)::before,.history .date p:nth-child(6)::after{
+	content: '';
+	display: inline-block;
+	height: 7px;
+	width: 7px;
+	border-radius: 50%;
+	background-color: rgb(80,80,80);
+	vertical-align: 10px;
+}
+.history .date p:nth-child(6)::before{
+	margin-right: 60px;
+}
+.history .date p:nth-child(6)::after{
+	margin-left: 60px;
+}
+.history .center-desc{
+	width: 220px;
+	position: absolute;
+	top: 46%;
+	color: rgb(80,80,80);
+	text-align: center;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+/*-------
+contact
+-------*/
+.contact{
+	height: 981px;
+}
+.contact .container{
+	position: relative;
+	text-align: left;
+}
+.contact .desc{
+	display: block;
+	width: 600px;
+	position: absolute;
+	right: 80px;
+	top: 220px;
+}
+.contact .desc h1{
+	font-size: 50px;
+	color: rgb(50,50,50);
+	letter-spacing: 5px;
+}
+.contact .desc p{
+	margin-top: 20px;
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	color: rgb(50,50,50);
+}
+.contact form{
+	position: absolute;
+	right: 80px;
+	display: block;
+	width: 600px;
+	top: 450px;
+}
+.contact input{
+	display: block;
+	margin-bottom: 35px;
+	border: none;
+	border-bottom: solid 1px #000;
+	padding: 8px;
+	padding-left: 4px;
+	width: 350px;
+	font-family: 'Abel', sans-serif;
+	letter-spacing: 1px;
+	background: transparent;
+}
+.contact input:focus{
+	outline: none;
+}
+.contact form .send-button{
+	border: none;
+	background:transparent;
+	color: #000;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	font-size: 24px;
+	display: block;
+	width: 100px;
+	padding: 0;
+	text-align: left;
+	transition: 0.3s;
+}
+.contact form .send-button:hover{
+	color: rgb(150,150,150);
+	transition: 0.3s;
+}
+.contact .sns{
+	display: block;
+	position: absolute;
+	right: 150px;
+	top: 450px;
+	border-left: solid 1px #000;
+}
+.contact .sns a{
+	display: block;
+	margin-bottom: 60px;
+	margin-left: 20px;
+}
+.contact .sns a:nth-child(3){
+	margin-bottom: 0;
+}
+.contact .sns a:hover{
+	opacity: 0.5;
+}
