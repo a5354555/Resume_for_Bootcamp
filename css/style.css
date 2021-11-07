@@ -126,7 +126,7 @@ ABOUT_CSS
 }
 .about .container{
 	padding-top: 250px;
-	height: 2475px;
+	height: 2400px;
 	margin: 0 auto;
 }
 .about .title::before,.about .title::after{
